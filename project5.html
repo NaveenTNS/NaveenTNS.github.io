@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Naveen Sai Tamanampudi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style2.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#projectList" data-bs-offset="80">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-light" href="index.html#home">Naveen Sai</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-light" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="index.html#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="static/Resume_April.pdf" download>Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" id="projectList">
+      <div class="position-sticky">
+        <a href="project1.html">Adidas Performance Analysis</a>
+        <a href="project2.html">Healthcare Database System</a>
+        <a href="project3.html">Study of Flight Schedules</a>
+        <a href="project4.html">Fish Ulcer Detection</a>
+        <a href="project5.html">Neethling Virus Detection</a>
+        <a href="project6.html">Hazardous Asteroid Prediction</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+      <section id="virus" class="project-section">
+        <h2>Neethling Virus Detection in Cows and Buffalos</h2>
+        Lumpy Skin Disease (LSD), caused by the Neethling virus, is a highly contagious and economically devastating disease affecting cattle and buffaloes worldwide. In this project, I developed a deep learning-based image classification system to detect LSD infections from cattle and buffalo images using a curated and preprocessed dataset. By building, evaluating, and ensembling five state-of-the-art models, and deploying the final solution as a web application, I aimed to enable rapid, accessible, and reliable disease screening to help prevent outbreaks and minimize livestock losses.<br><br>
+        <p>
+          <strong>Data Acquisition and Preprocessing:</strong><br>
+          • Collected 1,960 images from two Kaggle datasets, combining healthy and infected (lumpy skin) cattle and buffalo images.<br>
+          • Manually filtered and cleaned the dataset to remove 414 mislabeled, low-quality, or irrelevant images, resulting in a final dataset of 1,546 images (1,058 healthy, 488 infected).<br>
+          • Standardized all images to 256x256 pixels, normalized pixel values, and split the data into training (70%), validation (20%), and test (10%) sets.<br><br>
+          <strong>Model Development:</strong><br>
+          • Used Python with TensorFlow, OpenCV, NumPy, Matplotlib, and Seaborn for model development, training, and analysis.<br>
+          • Built and trained five deep learning models: a custom CNN, and four transfer learning models-VGG-16, Inception-V3, EfficientNet, and ResNet-50.<br>
+          • Selected the top three models (VGG-16, Inception-V3, EfficientNet) for ensemble techniques (Max Voting, Averaging, Weighted Averaging) to further boost accuracy.<br><br>
+          <strong>Web Application Deployment:</strong><br>
+          • Developed a secure, user-friendly web application using Flask, HTML, CSS (Bootstrap), and MongoDB for user management.<br>
+          • Integrated the final ensemble model, enabling users to upload cattle images and receive instant predictions (healthy or infected).<br><br>
+          <strong>Results:</strong><br>
+          • Individual model test accuracies ranged from 85.94% to 96.10%; ensemble techniques improved accuracy to 96.87% (Averaging method).<br>
+          • Averaging (top ensemble method) achieved 96.87% accuracy and 95.4% F1-score, outperforming individual models like Inception-V3 (95.1%) and VGG-16 ResNet-50 (93.2%).<br>
+          • The final solution provides rapid, accessible, and accurate disease detection, supporting early intervention and reducing the risk of widespread outbreaks.
+        </p>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
