@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Naveen Sai Tamanampudi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style2.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#projectList" data-bs-offset="80">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-light" href="index.html#home">Naveen Sai</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="static/Resume_AIEngineer.pdf" download>Resume</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" id="projectList">
+      <div class="position-sticky">
+        <a href="project1.html">Movie Review Sentiment Analysis</a>
+        <a href="project2.html">Adidas Performance Analysis</a>
+        <a href="project3.html">Healthcare Database System</a>
+        <a href="project4.html">Study of Flight Schedules</a>
+        <a href="project5.html">Fish Ulcer Detection</a>
+        <a href="project6.html">Neethling Virus Detection</a>
+        <a href="project7.html">Hazardous Asteroid Prediction</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      
+      <section id="healthcare" class="project-section">
+        <h2>Healthcare Database System</h2>
+        <p>
+          I developed a normalized database system that centralizes all critical hospital data. This design ensures seamless access and real-time updates across all departments, greatly improving operational efficiency and patient care.
+          <br><br>
+          <strong>Key Steps:</strong><br>
+          • The system was implemented with 14 core entities, including Patient, Doctor, Appointment, Medical_Record, Laboratory_Tests, Billing, Inventory, Supplier, and Pharmacy<br>
+          • Populated the database using 5000 records of data generated using faker and random libraries in python.<br>
+          • Queried the database using SQL to test it's working.
+        </p>
+        <img src="static/Project2.jpeg" width=100%vw height=auto>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

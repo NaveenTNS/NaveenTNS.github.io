@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Naveen Sai Tamanampudi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style2.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#projectList" data-bs-offset="80">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-light" href="index.html#home">Naveen Sai</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="static/Resume_AIEngineer.pdf" download>Resume</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" id="projectList">
+      <div class="position-sticky">
+        <a href="project1.html">Movie Review Sentiment Analysis</a>
+        <a href="project2.html">Adidas Performance Analysis</a>
+        <a href="project3.html">Healthcare Database System</a>
+        <a href="project4.html">Study of Flight Schedules</a>
+        <a href="project5.html">Fish Ulcer Detection</a>
+        <a href="project6.html">Neethling Virus Detection</a>
+        <a href="project7.html">Hazardous Asteroid Prediction</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      
+      <section id="asteroid" class="project-section">
+        <h2>Hazardous Asteroid Prediction Using Majority Voting Technique</h2>
+        This project developed a machine learning system to classify near-Earth asteroids as hazardous or non-hazardous, addressing a critical need for planetary defense. By combining three high-performing models via Majority Voting Technique (MVT), the solution achieved perfect accuracy, outperforming individual models and existing state-of-the-art approaches.<br><br>
+        <p>
+          <strong>Data Acquisition and Preprocessing:</strong><br>
+          • Collected a Kaggle dataset of 4,687 asteroids with 40 features (e.g., velocity, diameter, orbital parameters) and binary labels (hazardous/non-hazardous).<br>
+          • Removed 20 redundant features (e.g., duplicate metrics in different units) using correlation heatmap analysis, retaining 19 critical attributes like relative velocity, miss distance, and Tisserand parameter.<br>
+          • Split data into 70% training (3,280 samples) and 30% testing (1,407 samples) sets after standardization.<br><br>
+          
+          <strong>Model Development:</strong><br>
+          • Trained six baseline models: Naive Bayes (92.24%), Logistic Regression (95.45%), Random Forest (98.86%), Decision Tree (98.86%), SVM (95.17%), and K-Nearest Neighbor (91.04%).<br>
+          • Selected top 3 models (Logistic Regression, Random Forest, Decision Tree) based on higher test accuracy for ensemble learning.<br>
+          • Implemented MVT to combine predictions: final classification determined by majority vote across the three models.<br><br>
+          
+          <strong>Results:</strong><br>
+          • MVT achieved 100% accuracy on test data, correctly classifying all 1,407 samples.<br>
+          • Higher accuracy than individual models and 40% improvement over magnitude classification systems.<br>
+          • Demonstrated robustness in edge cases: resolved conflicting predictions from individual models.<br><br>
+        </p>
+      </section>
+      
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

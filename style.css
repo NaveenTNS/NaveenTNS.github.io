@@ -1,0 +1,233 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Source Sans Pro", sans-serif;
+
+}
+.main{
+  padding-bottom:40px;
+  height: 82vh;
+}
+
+.main2{
+  padding-bottom:40px;
+}
+.box {
+  background: white;
+  border: 2px solid black;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 1%;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.index-para{
+  text-align:justify;
+}
+
+.index-image{
+  display: block;
+  margin: 0 auto;
+  padding: 15px 0;
+  max-height:230px;
+  max-width:200px;
+  width: 100%;
+  height: auto;
+}
+
+.refl-image{
+  display: block;
+  margin: 0 auto;
+  padding: 15px 0;
+  max-height:280px;
+  max-width:430px;
+  width: 100%;
+  height: auto;
+  border-radius:5%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.skills-range
+{
+  width:100%;
+}
+
+
+.main-content {
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  margin: auto;
+  max-width: 75%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.75rem; /* 12px */
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.8;
+  letter-spacing: 0.0625rem; /* 1px */
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+}
+
+.content-para, .content-ul {
+  font-size: 1rem; /* 16px */
+  margin-left: 1 rem; /* 50px */
+  text-align: justify;
+}
+
+.table {
+  margin-left: 3.125rem; /* 50px */
+  font-size: 1rem; /* 16px */
+  max-width: 90%;
+}
+
+.subheading {
+  text-align: center;
+  padding: 1.25rem 0; /* 20px 0px */
+}
+
+.table-form3 {
+  margin: 1.25rem auto; /* 20px auto */
+  max-width: 50%;
+}
+
+.table-form6 {
+  margin: 0 auto;
+  max-width: 50%;
+} 
+
+.table-form7 {
+  padding: 0;
+  margin: 0;
+  max-width: 90%;
+}
+.section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.project:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+/* === Enhancements (keep existing CSS intact) === */
+
+/* Hero Section Enhancements */
+header {
+  color: black;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+header h1,
+header p {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animate hero ONLY when on homepage */
+body[data-section="home"] header h1 {
+  opacity: 0;
+  animation: fadeInDown 1.2s ease forwards;
+}
+body[data-section="home"] header p {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disable fade-up scroll effect for all sections */
+section {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+/* Modern Section Headings */
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  position: center;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0A66C2;
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Skills Badges */
+.skill-badge, 
+ul li.bg-dark {
+  background-color: #212529;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.skill-badge:hover,
+ul li.bg-dark:hover {
+  background-color: #0A66C2;
+  transform: translateY(-3px);
+}
+
+/* Project Cards Hover */
+.project {
+  transition: all 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Contact Icons Hover */
+.fa {
+  transition: all 0.3s ease;
+}
+.fa:hover {
+  transform: scale(1.2);
+}
+.fa-envelope { color: #EA4335; }
+.fa-linkedin { color: #0A66C2; }
+.fa-github { color: #333; }
+.fa-github:hover { color: #555; }
+
+/* Section Fade-In on Scroll */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-justify {
+  text-align: justify !important;
+  text-justify: inter-word; /* better spacing for justification */
+}
